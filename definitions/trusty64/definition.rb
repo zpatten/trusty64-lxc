@@ -5,9 +5,9 @@ Veewee::Session.declare({
   :disk_format => 'VDI',
   :hostiocache => 'on',
   :os_type_id => 'Ubuntu_64',
-  :iso_file => "ubuntu-13.04-server-amd64.iso",
-  :iso_src => "http://releases.ubuntu.com/13.04/ubuntu-13.04-server-amd64.iso",
-  :iso_md5 => '4bd3270bde86d7e4e017e3847a4af485',
+  :iso_file => "trusty-server-amd64.iso",
+  :iso_src => "http://cdimage.ubuntu.com/ubuntu-server/daily/current/trusty-server-amd64.iso",
+  :iso_md5 => '76c9a0183c3f0c34cb30b57a05af9ec3',
   :iso_download_timeout => "1000",
   :boot_wait => "4",
   :boot_cmd_sequence => [
@@ -18,7 +18,7 @@ Veewee::Session.declare({
     'fb=false debconf/frontend=noninteractive ',
     'keyboard-configuration/modelcode=SKIP keyboard-configuration/layout=us keyboard-configuration/variant=us console-setup/ask_detect=false ',
     'initrd=/install/initrd.gz -- <Enter>'
-],
+  ],
   :kickstart_port => "7122",
   :kickstart_timeout => "10000",
   :kickstart_file => "preseed.cfg",

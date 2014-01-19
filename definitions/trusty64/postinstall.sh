@@ -37,13 +37,10 @@ apt-get -y install nfs-common
 # Prime LXC
 apt-get -y install lxc lxc-templates
 
-lxc-create -n seed -t ubuntu -- --release lucid
-lxc-destroy -n seed -f
-
 lxc-create -n seed -t ubuntu -- --release precise
 lxc-destroy -n seed -f
 
-lxc-create -n seed -t ubuntu -- --release raring
+lxc-create -n seed -t ubuntu -- --release trusty
 lxc-destroy -n seed -f
 
 apt-get clean
